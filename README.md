@@ -1,6 +1,6 @@
 # Ebola data Uganda outbreak 2022
 
-Data are curated from openly accessible sources.
+This repository contains dated records of curated Ebola cases from the 2022 outbreak in Uganda. Data are curated from openly accessible sources. We continue to experience ongoing challenges in curation with inconsistent, aggregated, or missing case information; assumptions have been made and will be outlined in our data dictionary. Line-list data may change due to ongoing data reconciliation and validation. 
 
 ## Contributing
 
