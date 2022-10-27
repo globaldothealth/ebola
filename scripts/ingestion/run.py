@@ -28,9 +28,7 @@ GH_COLLECTION = os.environ.get("GH_COLLECTION")
 
 MINIMUM_DATA = ["ID", "Date_confirmation", "Curator_initials", "Notes", "Country", "Status"]
 
-PRIVATE_FIELDS = [
-"Curator_initials", "Source", "Source_II", "Source_III", "Source_IV", "Source_V", "Source_VI", "Pathogen_status"
-]
+PRIVATE_FIELDS = ["Curator_initials", "Pathogen_status"]
 
 TODAY = datetime.today()
 
