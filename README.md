@@ -1,5 +1,4 @@
 # Ebola data
-[![Ebola data S3 -> Github](https://github.com/globaldothealth/ebola/actions/workflows/ingestion_deploy.yml/badge.svg)](https://github.com/globaldothealth/ebola/actions/workflows/ingestion_tests.yml)
 
 ## Contributing
 
