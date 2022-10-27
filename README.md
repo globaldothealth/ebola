@@ -1,4 +1,6 @@
-# Ebola data
+# Ebola data Uganda outbreak 2022
+
+Data are curated from openly accessible sources.
 
 ## Contributing
 
@@ -15,4 +17,4 @@ or email data to info@global.health. Remove any Personally Identifiable Informat
 
 This repository and data exports are published under the CC BY 4.0 license.
 
-Please cite as: "Global.health Ebola (accessed on YYYY-MM-DD)"
+Please cite as: "Global.health Ebola (accessed on YYYY-MM-DD)" & please add the appropriate agency, paper, and/or individual in publications and/or derivatives using these data, contact them regarding the legal use of these data, and remember to pass-forward any existing license/warranty/copyright information.
