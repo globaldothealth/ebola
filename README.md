@@ -15,6 +15,6 @@ or email data to info@global.health. Remove any Personally Identifiable Informat
 
 ## License and attribution
 
-This repository and data exports are published under the CC BY 4.0 license.
+This repository is published under MIT License and data exports are published under the CC BY 4.0 license.
 
 Please cite as: "Global.health Ebola (accessed on YYYY-MM-DD)" & please add the appropriate agency, paper, and/or individual in publications and/or derivatives using these data, contact them regarding the legal use of these data, and remember to pass-forward any existing license/warranty/copyright information.
