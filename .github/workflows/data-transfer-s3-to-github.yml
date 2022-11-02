@@ -1,7 +1,7 @@
 # This transfers files from S3 to Github.
 # TODO: incorporate into the script in this repo
 # blocked by https://github.com/github/rest-api-description/issues/1147
-name: Monkeypox data S3 -> Github
+name: Ebola data S3 -> Github
 
 on:
   schedule:
