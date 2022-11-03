@@ -2,7 +2,7 @@
 
 This repository contains dated records of curated Ebola cases from the 2022 outbreak in Uganda. Data are curated from openly accessible sources. We continue to experience ongoing challenges in curation with inconsistent, aggregated, or missing case information; assumptions have been made and will be outlined in our data dictionary. Line-list data may change due to ongoing data reconciliation and validation. 
 
-##Data curation
+## Data curation
 This section is an overview of the data curation process and a discussion of our limitations.
 
 Curation, especially early in the outbreak, is a manual, labor-intensive process. We experience many recurring challenges in building an emerging disease dataset in real-time.
