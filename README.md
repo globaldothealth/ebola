@@ -13,17 +13,17 @@ Reports from government/official sources can be enriched with supplemental infor
 
 Users should refer to our Data Dictionary for a description of each variable. Assumptions for select variables are briefly discussed below.
 
-Case_status: Only confirmed and probable cases are logged at this time. 
+**Case_status**: Only confirmed and probable cases are logged at this time. 
 
-Date_of_onset: Information is only available for probable cases; we are unable to disaggregate Date_of_onset details for confirmed cases.  
+**Date_of_onset**: Information is only available for probable cases; we are unable to disaggregate Date_of_onset details for confirmed cases.  
 
-Date_confirmation: The report date is used when a Date_confirmation is not specified by source.
+**Date_confirmation**: The report date is used when a Date_confirmation is not specified by source.
 
-Outcome. Type: Death: The report date is used when a Date_death is not specified by source. If the number of deaths exceeds the number of new cases reported for that day, then deaths are logged under a previous ID with unassigned outcome and corresponding location information, when available.
+**Outcome**. Type: Death: The report date is used when a Date_death is not specified by source. If the number of deaths exceeds the number of new cases reported for that day, then deaths are logged under a previous ID with unassigned outcome and corresponding location information, when available.
 
-Outcome. Type: Recovery: When a recovery is reported, the recovery is assigned to a previous ID with unassigned outcome and corresponding location information, when available.
+**Outcome**. Type: Recovery: When a recovery is reported, the recovery is assigned to a previous ID with unassigned outcome and corresponding location information, when available.
 
-Healthcare_worker: Healthcare worker information (e.g. location, date_confirmation, outcome) is not consistently provided by source. Supplemental sources are used, when available, to gain context that may help us to assign an ID. However, due to the limited availability of information, we have not been able to log every confirmed HCW case or outcome. 
+**Healthcare_worker**: Healthcare worker information (e.g. location, date_confirmation, outcome) is not consistently provided by source. Supplemental sources are used, when available, to gain context that may help us to assign an ID. However, due to the limited availability of information, we have not been able to log every confirmed HCW case or outcome. 
 
 Data are hand-curated. The process and methods to create, organize, and maintain data have been applied with consistency; however, we’re human and mistakes happen. As stated above, line-list data may change due to ongoing data reconciliation and validation. We welcome your contributions and feedback. Get involved!
 
