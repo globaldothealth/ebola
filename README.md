@@ -3,7 +3,7 @@
 This repository contains dated records of curated Ebola cases from the 2022 outbreak in Uganda. Data are curated from openly accessible sources. We continue to experience ongoing challenges in data curation, discussed below. Line-list data may change due to ongoing data reconciliation and validation. 
 
 UPDATE:
-2022-11-04: Confirmed cases have been added to the line-list through SitRep [41]((https://www.afro.who.int/sites/default/files/2022-11/Ug_EVD_SitRep%2341.pdf) @131 cases. Our curation team is working to reconcile case data between SitReps (e.g. deaths, recoveries, HCW), which will take time to complete due to changing report format and fluctuating counts that greatly complicate the review process.
+2022-11-04: Confirmed cases have been added to the line-list through SitRep [41](https://www.afro.who.int/sites/default/files/2022-11/Ug_EVD_SitRep%2341.pdf) @131 cases. Our curation team is working to reconcile case data between SitReps (e.g. deaths, recoveries, HCW), which will take time to complete due to changing report format and fluctuating counts that greatly complicate the review process.
 
 ## Data curation
 This section is an overview of the data curation process, a discussion about limitations and assumptions.
