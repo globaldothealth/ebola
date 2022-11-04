@@ -11,7 +11,7 @@ The Ebola line-list is built from a collection of sources, listed here, which wi
 
 Reports from government/official sources can be enriched with supplemental information retrieved from local reporting (including media) or other sources. Metadata are added at any time, as information becomes available and our time and resources permit. After making changes, the case will be recorded as modified with the date. Multiple curators look at each datapoint and any discrepancies are resolved in conversations between them. Assumptions are made that may compromise the accuracy of the data. 
 
-Users should refer to our Data Dictionary for a description of each variable. Assumptions for select variables are briefly discussed below.
+Users should refer to our [data dictionary](data_dictionary.yml) for a description of each variable. Assumptions for select variables are briefly discussed below.
 
 **Case_status**: Only confirmed and probable cases are logged at this time. 
 
