@@ -1,0 +1,296 @@
+dictionary_last_modified: 2022-11-04
+fields:
+  - name: ID
+    type: string
+    description: >
+      Unique ID of the case 
+    required: true
+
+ - name: ID
+    type: string
+    description: >
+      Constant, pre-filled value, pathogen of interest 
+    required: true
+
+  - name: Case_status
+    type: confirmed | suspected | discarded | omit_error
+    description: >
+      Status of a case. Cases which are discarded were previously
+      suspected but have now been confirmed negative, and should
+      be excluded from case counts. Cases which are omit_error were
+      incorrectly added and should be dismissed from any data
+      interpretation.
+    required: true
+
+  - name: Location
+    type: string
+    description: Country subdivision where case was reported
+    examples: [Islington, Croydon]
+
+  - name: City
+    type: string
+    description: City where case was reported
+    examples: [London, Madrid, Sydney, Boston]
+
+  - name: Country
+    type: string
+    description: Country where case was reported
+    required: true
+    examples: [England, United States, Spain, Australia]
+
+  - name: Country_ISO3
+    type: string
+    description: ISO 3166-1 alpha-3, three letter country codes
+    required: true
+    examples: [ITA, GBR, ESP, BOL]
+
+  - name: Age
+    type: integer-range
+    description: Age of the individual, specified as a range, either open-ended (<n, >n) or as a range delimited by a hyphen (m-n) following 5-year age increments (m-n)
+
+  - name: Gender
+    type: male | female | other
+    description: Gender of the individual
+
+ - name: Occupation
+    type: string
+    description: Free response entry describing the individual's occupation
+
+ - name: Healthcare_worker
+    type: Y | N | NA
+    description: Is the individual a healthcare worker (Y=Yes, N=No, NA=Not applicable)?
+
+   - name: Symptoms
+    type: string
+    description: Comma separated list of symptoms
+    examples:
+      - rash
+      - vesicular rash
+      - skin lesions
+      - ulcerative lesions
+      - oral and genital ulcers
+      - fever
+
+ - name: Date_onset
+    type: iso8601date
+    description: Date of onset of symptoms
+
+  - name: Date_confirmation
+    type: iso8601date
+    description: Date when case was confirmed
+
+  - name: Confirmation_method
+    type: string
+    description: Test used to confirm diagnosis 
+examples: ["RT-PCR"]
+
+ - name: Previous_infection
+    type: Y | N | NA
+    description: Did the individual test positive for the infection prior to the most recent diagnosis (Y=Yes, N=No, NA=Not applicable)?
+
+ - name: Co_infection
+    type: string
+    description: If the individual tested positive for another pathogen
+
+ - name: Pre_existing_condition
+    type: string
+    description: If the individual has any pre-existing medical conditions 
+
+ - name: Pregnancy_status
+    type: Y | N | NA
+    description: Is the case pregnant or post-partum? 
+
+ - name: Vaccination
+    type: Y | N | NA
+    description: Has the individual received a dose of vaccine (Y=Yes, N=No, NA=Not applicable)? 
+
+ - name: Vaccine_name
+    type: string
+    description: Name of the first vaccine 
+
+ - name: Vaccine_date
+    type: iso8601date
+    Description: Date of first vaccination
+
+- name: Vaccine_side_effects
+    type: string
+    description: Comma separated list of symptoms experienced after receiving the vaccine (i.e. cough, sore throat, etc.) 
+
+ - name: Date_of_first_consult
+    type: iso8601date
+    Description: Date that the individual received first clinical consultation
+
+- name: Hospitalised (Y/N/NA)
+    type: Y | N | NA
+    description: Whether individual was hospitalised (Y=Yes, N=No, NA=Not applicable)
+
+ - name: Reason for hospitalisation
+    type: monitoring | treatment | unknown
+    Description: Reason why the individual was hospitalised; can list multiple, comma separated 
+
+ - name: Date_hospitalisation
+    type: iso8601date
+    Description: Date individual was hospitalised 
+
+ - name: Date_discharge_hospital
+    type: iso8601date
+    Description: Date that the individual was discharged from the hospital. Note: there is a separate field for ICU discharge 
+  
+  - name: Intensive_care (Y/N/NA)
+    type: Y | N | NA
+    description: Whether individual admitted to an intensive care unit or high dependency unit at hospital (Y=Yes, N=No, NA=Not applicable)
+
+  - name: Date_admission_ICU 
+    type: Y | N | NA
+    description: Date individual entered intensive care unit
+
+ - name: Date_discharge_ICU 
+    type: Y | N | NA
+    description: Date that the individual was discharged from the ICU
+
+  - name: Home_monitoring 
+    type: Y | N | NA
+    description: Whether individual is being remotely monitored by health officials at home without hospital admission (Y=Yes, N=No, NA=Not applicable)
+
+  - name: Isolated (Y/N/NA)
+    type: Y | N | NA
+    description: Whether individual was isolated at home or in hospital (Y=Yes, N=No, NA=Not applicable)
+
+  - name: Date_isolation
+    type: iso8601date
+    description: Date individual entered isolation
+
+  - name: Outcome
+    type: recovered | death
+    description: Optional field that specifies outcome of the disease
+
+   - name: Date_death
+    type: iso8601date
+    description: Date of death
+
+ - name: Date_recovered
+    type: iso8601date
+    description: Date of recovery
+
+ - name: Contact_with_case
+    type: Y | N | NA
+    Description: Has the individual had contact with a confirmed/ probable/ suspected case (Y=Yes, N=No, NA=Not applicable)?
+    
+  - name: Contact_ID
+    type: integer
+    description: If specified, is the case ID from which this patient contracted the virus
+
+  - name: Contact_setting
+    type: string
+    description: Setting where contact occurred that led to transmission
+    examples: Dictionary of possible entries:
+HOUSE= household 
+WORK= workplace
+SCHOOL= school/nursery
+HEALTH= healthcare (including laboratory exposure)
+PARTY= Sexual contact at night club/private party/sauna or similar setting
+BAR= Bar/restaurant/ or other small event where there was no sexual contact
+LARGE = Large event with no sexual contact (e.g., festival or sports event) 
+LARGECONTACT = Large event with sexual contact
+OTHER
+UNK= Unknown
+
+- name: Contact_animal
+  description: Whether the individual has known contact with animals
+  examples: Dictionary of possible entries:
+PET = Household pets excluding rodents
+PETRODENTS = Rodent pets
+WILD = Wild animals excluding rodent
+WILDRODENTS = Wild rodents
+Other (specify)
+
+ - name: Contact_comment
+    type: string
+    description: Free text describing any additional contact information.
+
+  - name: Transmission
+    type: string
+    description: Setting where contact occurred that led to transmission
+    examples: Dictionary of possible entries:
+ANIMAL = Animal to human transmission
+HAI = Healthcare-associated
+LAB = Transmission in a laboratory due to occupational exposure
+MTCT = Transmission from mother to child during pregnancy or at birth
+OTHER = Other transmission
+FOMITE = Contact with contaminated material (e.g bedding, clothing, objects)
+PTP = Person-to-person (excluding: mother-to-child, healthcare-associated or sexual transmission)
+SEX = Sexual transmission
+TRANSFU = parenteral transmission including intravenous drug use and transfusion
+UNK = Unknown
+
+  - name: Travel_history (Y/N/NA)
+    type: Y | N | NA
+    description: Whether individual has travel history, domestic and/or international (Y=Yes, N=No, NA=Not applicable)
+
+  - name: Travel_history_entry
+    type: string
+    description: Date when individual entered the country
+
+  - name: Travel_history_start
+    type: string
+    description: Free text describing travel
+
+  - name: Travel_history_location
+    type: string
+    description: Last known location where individual had travelled from
+    example: [Europe] 
+
+  - name: Travel_history_country
+    type: string
+    description: Last known country where individual had travelled from
+    example: [Spain] 
+
+  - name: Genomics_Metadata
+    type: string
+    description: Which clade the viral strain belongs to
+    examples:
+      - West African Clade
+      - North African Clade
+
+  - name: Accession Number
+    type: string
+    description: Accession number of the sequence uploaded to public database
+
+  - name: Source
+    type: url
+    description: URL of news story or government source where this case was confirmed
+    required: true
+
+  - name: Source_II
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Source_III
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Source_IV
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Source_V
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Source_VI
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Source_VII
+    type: url
+    description: URL of news story or government source where this case was confirmed (archived or secondary source)
+
+  - name: Date_entry
+    type: iso8601date
+    description: Date case was entered into line list
+    required: true
+
+  - name: Date_last_modified
+    type: iso8601date
+    description: Last date when case was modified in line list
+    required: true
