@@ -6,7 +6,7 @@ fields:
       Unique ID of the case 
     required: true
 
- - name: Pathogen
+  - name: Pathogen
     type: string
     description: >
       Constant, pre-filled value, pathogen of interest 
@@ -52,15 +52,15 @@ fields:
     type: male | female | other
     description: Gender of the individual
 
- - name: Occupation
+  - name: Occupation
     type: string
     description: Free response entry describing the individual's occupation
 
- - name: Healthcare_worker
+  - name: Healthcare_worker
     type: Y | N | NA
     description: Is the individual a healthcare worker (Y=Yes, N=No, NA=Not applicable)?
 
-   - name: Symptoms
+  - name: Symptoms
     type: string
     description: Comma separated list of symptoms
     examples:
@@ -71,7 +71,7 @@ fields:
       - oral and genital ulcers
       - fever
 
- - name: Date_onset
+  - name: Date_onset
     type: iso8601date
     description: Date of onset of symptoms
 
@@ -82,59 +82,60 @@ fields:
   - name: Confirmation_method
     type: string
     description: Test used to confirm diagnosis 
-examples: ["RT-PCR"]
+    examples: ["RT-PCR"]
 
- - name: Previous_infection
+  - name: Previous_infection
     type: Y | N | NA
     description: Did the individual test positive for the infection prior to the most recent diagnosis (Y=Yes, N=No, NA=Not applicable)?
 
- - name: Co_infection
+  - name: Co_infection
     type: string
     description: If the individual tested positive for another pathogen
 
- - name: Pre_existing_condition
+  - name: Pre_existing_condition
     type: string
     description: If the individual has any pre-existing medical conditions 
 
- - name: Pregnancy_status
+  - name: Pregnancy_status
     type: Y | N | NA
     description: Is the case pregnant or post-partum? 
 
- - name: Vaccination
+  - name: Vaccination
     type: Y | N | NA
     description: Has the individual received a dose of vaccine (Y=Yes, N=No, NA=Not applicable)? 
 
- - name: Vaccine_name
+  - name: Vaccine_name
     type: string
     description: Name of the first vaccine 
 
- - name: Vaccine_date
+  - name: Vaccine_date
     type: iso8601date
     Description: Date of first vaccination
 
-- name: Vaccine_side_effects
+  - name: Vaccine_side_effects
     type: string
     description: Comma separated list of symptoms experienced after receiving the vaccine (i.e. cough, sore throat, etc.) 
 
- - name: Date_of_first_consult
+  - name: Date_of_first_consult
     type: iso8601date
     Description: Date that the individual received first clinical consultation
 
-- name: Hospitalised (Y/N/NA)
+  - name: Hospitalised (Y/N/NA)
     type: Y | N | NA
     description: Whether individual was hospitalised (Y=Yes, N=No, NA=Not applicable)
 
- - name: Reason for hospitalisation
+  - name: Reason for hospitalisation
     type: monitoring | treatment | unknown
     Description: Reason why the individual was hospitalised; can list multiple, comma separated 
 
- - name: Date_hospitalisation
+  - name: Date_hospitalisation
     type: iso8601date
     Description: Date individual was hospitalised 
 
- - name: Date_discharge_hospital
+  - name: Date_discharge_hospital
     type: iso8601date
-    Description: Date that the individual was discharged from the hospital. Note: there is a separate field for ICU discharge 
+    Description: > 
+        Date that the individual was discharged from the hospital. Note: there is a separate field for ICU discharge.
   
   - name: Intensive_care (Y/N/NA)
     type: Y | N | NA
@@ -144,7 +145,7 @@ examples: ["RT-PCR"]
     type: Y | N | NA
     description: Date individual entered intensive care unit
 
- - name: Date_discharge_ICU 
+  - name: Date_discharge_ICU 
     type: Y | N | NA
     description: Date that the individual was discharged from the ICU
 
@@ -164,15 +165,15 @@ examples: ["RT-PCR"]
     type: recovered | death
     description: Optional field that specifies outcome of the disease
 
-   - name: Date_death
+  - name: Date_death
     type: iso8601date
     description: Date of death
 
- - name: Date_recovered
+  - name: Date_recovered
     type: iso8601date
     description: Date of recovery
 
- - name: Contact_with_case
+  - name: Contact_with_case
     type: Y | N | NA
     Description: Has the individual had contact with a confirmed/ probable/ suspected case (Y=Yes, N=No, NA=Not applicable)?
     
@@ -183,45 +184,48 @@ examples: ["RT-PCR"]
   - name: Contact_setting
     type: string
     description: Setting where contact occurred that led to transmission
-    examples: Dictionary of possible entries:
-HOUSE= household 
-WORK= workplace
-SCHOOL= school/nursery
-HEALTH= healthcare (including laboratory exposure)
-PARTY= Sexual contact at night club/private party/sauna or similar setting
-BAR= Bar/restaurant/ or other small event where there was no sexual contact
-LARGE = Large event with no sexual contact (e.g., festival or sports event) 
-LARGECONTACT = Large event with sexual contact
-OTHER
-UNK= Unknown
+    examples: >
+        Dictionary of possible entries:
+            HOUSE= household 
+            WORK= workplace
+            SCHOOL= school/nursery
+            HEALTH= healthcare (including laboratory exposure)
+            PARTY= Sexual contact at night club/private party/sauna or similar setting
+            BAR= Bar/restaurant/ or other small event where there was no sexual contact
+            LARGE = Large event with no sexual contact (e.g., festival or sports event) 
+            LARGECONTACT = Large event with sexual contact
+            OTHER
+            UNK= Unknown
 
-- name: Contact_animal
-  description: Whether the individual has known contact with animals
-  examples: Dictionary of possible entries:
-PET = Household pets excluding rodents
-PETRODENTS = Rodent pets
-WILD = Wild animals excluding rodent
-WILDRODENTS = Wild rodents
-Other (specify)
+  - name: Contact_animal
+    description: Whether the individual has known contact with animals
+    examples: >
+        Dictionary of possible entries:
+            PET = Household pets excluding rodents
+        PETRODENTS = Rodent pets
+        WILD = Wild animals excluding rodent
+        WILDRODENTS = Wild rodents
+        Other (specify)
 
- - name: Contact_comment
+  - name: Contact_comment
     type: string
     description: Free text describing any additional contact information.
 
   - name: Transmission
     type: string
     description: Setting where contact occurred that led to transmission
-    examples: Dictionary of possible entries:
-ANIMAL = Animal to human transmission
-HAI = Healthcare-associated
-LAB = Transmission in a laboratory due to occupational exposure
-MTCT = Transmission from mother to child during pregnancy or at birth
-OTHER = Other transmission
-FOMITE = Contact with contaminated material (e.g bedding, clothing, objects)
-PTP = Person-to-person (excluding: mother-to-child, healthcare-associated or sexual transmission)
-SEX = Sexual transmission
-TRANSFU = parenteral transmission including intravenous drug use and transfusion
-UNK = Unknown
+    examples: >
+        Dictionary of possible entries:
+            ANIMAL = Animal to human transmission
+            HAI = Healthcare-associated
+            LAB = Transmission in a laboratory due to occupational exposure
+            MTCT = Transmission from mother to child during pregnancy or at birth
+            OTHER = Other transmission
+            FOMITE = Contact with contaminated material (e.g bedding, clothing, objects)
+            PTP = Person-to-person (excluding: mother-to-child, healthcare-associated or sexual transmission)
+            SEX = Sexual transmission
+            TRANSFU = parenteral transmission including intravenous drug use and transfusion
+            UNK = Unknown
 
   - name: Travel_history (Y/N/NA)
     type: Y | N | NA
