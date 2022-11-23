@@ -18,11 +18,12 @@ CASE = {
 
 CLEAN_CASE = CASE.copy()
 del CLEAN_CASE["Curator_initials"]
+del CLEAN_CASE["Notes"]
 CLEAN_DATA = [CLEAN_CASE]
 
 CSV_DATA = """
-ID,Date_confirmation,Notes,Country,Status,
-1,2021-05-12,example note,Uganda,confirmed,
+ID,Date_confirmation,Country,Status,
+1,2021-05-12,Uganda,confirmed,
 """
 
 
@@ -43,7 +44,7 @@ def test_clean_data():
 
 
 def test_format_data():
-	assert format_data(CLEAN_DATA) == CSV_DATA
+	assert format_data(CLEAN_DATA).strip("\n") == CSV_DATA.strip("\n")
 
 
 @pytest.mark.skipif(not os.environ.get("DOCKERIZED", False),
@@ -60,3 +61,4 @@ def test_data_to_db():
 	db_records = get_db_records(GH_COLLECTION)
 	del db_records[0]["_id"]
 	assert db_records == CLEAN_DATA
+

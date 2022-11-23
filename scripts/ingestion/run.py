@@ -26,18 +26,18 @@ DB_CONNECTION = os.environ.get("DB_CONNECTION")
 DATABASE_NAME = os.environ.get("DATABASE_NAME")
 GH_COLLECTION = os.environ.get("GH_COLLECTION")
 
-MINIMUM_DATA = ["ID", "Date_confirmation", "Curator_initials", "Notes", "Country", "Status"]
+MINIMUM_DATA = ["ID", "Date_confirmation", "Curator_initials", "Country", "Status"]
 
-PRIVATE_FIELDS = ["Curator_initials", "Pathogen_status"]
+PRIVATE_FIELDS = ["Curator_initials", "Notes", "Pathogen_status"]
 
 TODAY = datetime.today()
 
 
 def setup_logger():
-    h = logging.StreamHandler(sys.stdout)
-    rootLogger = logging.getLogger()
-    rootLogger.addHandler(h)
-    rootLogger.setLevel(logging.DEBUG)
+	h = logging.StreamHandler(sys.stdout)
+	rootLogger = logging.getLogger()
+	rootLogger.addHandler(h)
+	rootLogger.setLevel(logging.DEBUG)
 
 
 def get_data():
@@ -50,9 +50,10 @@ def get_data():
 
 def clean_data(data):
 	logging.info("Cleaning data")
-	for case in data:
+	for c in data:
 		for field in PRIVATE_FIELDS:
-			case.pop(field)
+			if field in c:
+				c.pop(field)
 	return data
 
 
