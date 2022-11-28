@@ -5,7 +5,6 @@ This repository contains dated records of curated Ebola cases from the 2022 outb
 Our latest data set and archives can be found [here](https://3mmuwilir3.execute-api.eu-central-1.amazonaws.com/web).
 
 UPDATE:
-The curation team will be offline Wednesday through Friday, November 23rd - 25th, in observance of the U.S. Thanksgiving holiday. Operations will resume on Monday, November 28th.
 
 2022-11-23: The curation team has completed a data reconciliation exercise to update case data between SitReps (e.g. deaths, recoveries, HCW, and location information). The "Date_last_modified" column lists the date of reconciliation on 2022-11-22.  Data are updated through SitRep [57](https://www.afro.who.int/countries/uganda/publication/ebola-virus-disease-uganda-sitrep-57) with a total of 141 confirmed cases, including 55 deaths, and 79 recoveries.
 
