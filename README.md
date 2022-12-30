@@ -6,7 +6,7 @@ Our latest data set and archives can be found [here](https://3mmuwilir3.execute-
 
 UPDATE:
 
-2022-12-22. The G.h team will be offline for the holidays starting Friday, December 23rd. Reporting will resume on Tuesday, December 27th.
+2022-12-30. The G.h team will be offline in observance of the New Year holiday on Monday, January 2nd. Reporting will resume on Tuesday, January 3rd.
 
 2022-12-14. The sum of deaths and recoveries for the G.h dataset is not in alignment with current MOH numbers. Our curation team identified count and location discrepancies in data from SitRep [66](https://www.afro.who.int/countries/uganda/publication/ebola-virus-disease-uganda-sitrep-66) and beyond that prevent us from updating the Outcome for the remaining cases. Also, SitRep [68](https://www.afro.who.int/countries/uganda/publication/ebola-virus-disease-uganda-sitrep-68) reported a reclassification of Outcome for a Mubende case; however, without further detail, we are unable to identify a specific ID# for the change. We are limited by the detail and accuracy of information publicly released by the MOH. We will continue to check for new MOH reports that may provide updated/corrected case information that could reconcile differences between our two datasets. 
 
