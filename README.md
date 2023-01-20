@@ -6,7 +6,13 @@ Our latest data set and archives can be found [here](https://3mmuwilir3.execute-
 
 UPDATE:
 
-2022-12-30. The G.h team will be offline in observance of the New Year holiday on Monday, January 2nd. Reporting will resume on Tuesday, January 3rd.
+2023-01-20. On January 11th, 2023, the Ugandan Ministry of Health declared the end of the SVD Ebola outbreak. The final number of confirmed cases is 142. G.h counts for confirmed cases by district matches that reported in the MOH SitReps through [#90](https://www.afro.who.int/sites/default/files/2023-01/Ug_EVD_SitRep%2390.pdf) (Mubende 64; Kyegegwa 4; Kassanda 49; Kagadi 1; Masaka 1; Wakiso 4; Jinja 1; Kampala 17; Bunyangabu 1); however, SitRep [#91](https://www.afro.who.int/sites/default/files/2023-01/Ug_EVD_SitRep%2391.pdf) reassigned a KAL case to WAK without explanation. Therefore, final counts of confirmed cases by district do not match. 
+
+Also, Outcome for ID#s 149, 150, 157, 158, 161, and 162 remain unassigned for reasons outlined in our [blog post](https://globaldothealth.substack.com/p/curator-review-for-2022-reflecting). 
+
+Finally, Uganda's [MOH website](https://www.health.go.ug/ebola/) differs from final SitRep data in [#93](https://www.afro.who.int/sites/default/files/2023-01/Ug_EVD_SitRep%2393.pdf). The MOH website reports 142 cases/ 56 deaths/ 86 recoveries. SitRep data reports 142 cases/ 55 deaths/ 87 recoveries.
+
+We recognize these discrepancies and remain limited by the detail and accuracy of information publicly released by the MOH. Questions can be addressed to info@global.health.
 
 2022-12-14. The sum of deaths and recoveries for the G.h dataset is not in alignment with current MOH numbers. Our curation team identified count and location discrepancies in data from SitRep [66](https://www.afro.who.int/countries/uganda/publication/ebola-virus-disease-uganda-sitrep-66) and beyond that prevent us from updating the Outcome for the remaining cases. Also, SitRep [68](https://www.afro.who.int/countries/uganda/publication/ebola-virus-disease-uganda-sitrep-68) reported a reclassification of Outcome for a Mubende case; however, without further detail, we are unable to identify a specific ID# for the change. We are limited by the detail and accuracy of information publicly released by the MOH. We will continue to check for new MOH reports that may provide updated/corrected case information that could reconcile differences between our two datasets. 
 
